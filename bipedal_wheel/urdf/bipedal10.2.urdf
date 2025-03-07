@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="bipedal10.2">
+  <mujoco>
+      <compiler
+      meshdir = "../meshes/"
+      balanceinertia = "true"
+      discardvisual = "false" />
+  </mujoco>
+  
+  <link name="world">
+    <inertial>
+      <mass value="0" />
+      <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.043035 0.046782 -0.022543"
+        rpy="0 0 0" />
+      <mass
+        value="0.8042" />
+      <inertia
+        ixx="0.00051005"
+        ixy="7.4799E-07"
+        ixz="1.5399E-07"
+        iyy="0.00026894"
+        iyz="1.1196E-06"
+        izz="0.00074112" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92549 0.92549 0.90588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="floating_base" type="floating">
+    <parent link="world" />
+    <child link="base_link" />
+  </joint>
+
+  <link
+    name="FixMotor1">
+    <inertial>
+      <origin
+        xyz="0.010976 -0.023825 1.6242E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0548" />
+      <inertia
+        ixx="9.9449E-06"
+        ixy="1.213E-08"
+        ixz="-5.3186E-10"
+        iyy="4.0845E-06"
+        iyz="3.4715E-09"
+        izz="8.4884E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/FixMotor1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/FixMotor1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fix1"
+    type="fixed">
+    <origin
+      xyz="-0.092323 0.070189 -0.020612"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FixMotor1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="FixMotor3">
+    <inertial>
+      <origin
+        xyz="1.6242E-05 -0.023825 -0.010976"
+        rpy="0 0 0" />
+      <mass
+        value="0.0548" />
+      <inertia
+        ixx="8.4884E-06"
+        ixy="3.4715E-09"
+        ixz="5.3186E-10"
+        iyy="4.0845E-06"
+        iyz="-1.213E-08"
+        izz="9.9449E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/FixMotor3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/FixMotor3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fix3"
+    type="fixed">
+    <origin
+      xyz="0.0060771 0.070189 -0.020612"
+      rpy="0 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FixMotor3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="R1">
+    <inertial>
+      <origin
+        xyz="0.00025807 -0.0022112 -0.054813"
+        rpy="0 0 0" />
+      <mass
+        value="0.044" />
+      <inertia
+        ixx="5.9272E-05"
+        ixy="-9.8922E-10"
+        ixz="-1.0171E-06"
+        iyy="6.6118E-05"
+        iyz="-8.6352E-08"
+        izz="7.9954E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/R1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/R1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R1"
+    type="revolute">
+    <origin
+      xyz="0.024227 0.059189 -0.020612"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="R1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FixMotor4">
+    <inertial>
+      <origin
+        xyz="1.5744E-05 -0.023378 -0.010388"
+        rpy="0 0 0" />
+      <mass
+        value="0.0548" />
+      <inertia
+        ixx="8.5302E-06"
+        ixy="3.4485E-09"
+        ixz="5.3228E-10"
+        iyy="4.1264E-06"
+        iyz="-1.2131E-08"
+        izz="1.0022E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/FixMotor4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/FixMotor4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fix4"
+    type="fixed">
+    <origin
+      xyz="-0.00028834 -0.024 -0.0905"
+      rpy="-1.5708 0.0031861 0" />
+    <parent
+      link="R1" />
+    <child
+      link="FixMotor4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="R2">
+    <inertial>
+      <origin
+        xyz="9.9185E-05 0.0067556 -0.044274"
+        rpy="0 0 0" />
+      <mass
+        value="0.0272" />
+      <inertia
+        ixx="0.00010024"
+        ixy="4.8276E-08"
+        ixz="-1.7347E-06"
+        iyy="0.00010679"
+        iyz="2.8305E-06"
+        izz="7.7372E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/R2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.43137 0.43137 0.43137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/R2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R2"
+    type="revolute">
+    <origin
+      xyz="-0.00038233 -0.0108 -0.12"
+      rpy="0 0 0" />
+    <parent
+      link="R1" />
+    <child
+      link="R2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R3">
+    <inertial>
+      <origin
+        xyz="0.022331 0.00037346 7.3703E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0545" />
+      <inertia
+        ixx="1.1678E-06"
+        ixy="-3.2431E-09"
+        ixz="5.9565E-11"
+        iyy="6.3638E-07"
+        iyz="2.1171E-08"
+        izz="5.5809E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/R3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/R3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R3"
+    type="fixed">
+    <origin
+      xyz="0.0024572 -0.0235 -0.11997"
+      rpy="2.1049 0 1.5708" />
+    <parent
+      link="R2" />
+    <child
+      link="R3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="R4">
+    <inertial>
+      <origin
+        xyz="-5.703E-12 0.0065924 2.0318E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.0545" />
+      <inertia
+        ixx="1.3633E-05"
+        ixy="1.1132E-16"
+        ixz="8.8032E-18"
+        iyy="2.4575E-05"
+        iyz="1.8442E-16"
+        izz="1.3633E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/R4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/R4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R4"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-3.1416 -1.0367 1.5708" />
+    <parent
+      link="R3" />
+    <child
+      link="R4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L1">
+    <inertial>
+      <origin
+        xyz="0.00016054 0.0022041 -0.054814"
+        rpy="0 0 0" />
+      <mass
+        value="0.044" />
+      <inertia
+        ixx="5.9268E-05"
+        ixy="1.1414E-09"
+        ixz="-1.1084E-06"
+        iyy="6.6118E-05"
+        iyz="8.6351E-08"
+        izz="7.9992E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/L1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/L1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1"
+    type="revolute">
+    <origin
+      xyz="-0.11057 0.059189 -0.020612"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="L1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FixMotor2">
+    <inertial>
+      <origin
+        xyz="1.5744E-05 -0.023378 -0.010388"
+        rpy="0 0 0" />
+      <mass
+        value="0.0548" />
+      <inertia
+        ixx="8.5302E-06"
+        ixy="3.4485E-09"
+        ixz="5.3228E-10"
+        iyy="4.1264E-06"
+        iyz="-1.2131E-08"
+        izz="1.0022E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/FixMotor2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/FixMotor2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fix2"
+    type="fixed">
+    <origin
+      xyz="-0.00044938 0.024 -0.090499"
+      rpy="-1.5708 -0.0049655 3.1416" />
+    <parent
+      link="L1" />
+    <child
+      link="FixMotor2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L2">
+    <inertial>
+      <origin
+        xyz="0.00036985 -0.0067556 -0.044273"
+        rpy="0 0 0" />
+      <mass
+        value="0.0272" />
+      <inertia
+        ixx="0.00010025"
+        ixy="-3.0964E-08"
+        ixz="-1.1689E-06"
+        iyy="0.00010679"
+        iyz="-2.8308E-06"
+        izz="7.7195E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/L2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.43137 0.43137 0.43137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/L2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2"
+    type="revolute">
+    <origin
+      xyz="-0.00059586 0.0108 -0.12"
+      rpy="0 0 0" />
+    <parent
+      link="L1" />
+    <child
+      link="L2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L3">
+    <inertial>
+      <origin
+        xyz="0.022331 0.00037346 -7.3702E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0545" />
+      <inertia
+        ixx="1.1678E-06"
+        ixy="-3.2431E-09"
+        ixz="-5.9565E-11"
+        iyy="6.3638E-07"
+        iyz="-2.1171E-08"
+        izz="5.5809E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/L3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/L3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3"
+    type="fixed">
+    <origin
+      xyz="0.0031907 0.0235 -0.11996"
+      rpy="2.735 0 -1.5708" />
+    <parent
+      link="L2" />
+    <child
+      link="L3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L4">
+    <inertial>
+      <origin
+        xyz="3.8845E-12 -0.0065924 -5.6056E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.0545" />
+      <inertia
+        ixx="1.3633E-05"
+        ixy="-2.6607E-16"
+        ixz="1.6295E-18"
+        iyy="2.4575E-05"
+        iyz="2.4148E-16"
+        izz="1.3633E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/L4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bipedal10.2/meshes/L4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L4"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 0.40658 -1.5708" />
+    <parent
+      link="L3" />
+    <child
+      link="L4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
