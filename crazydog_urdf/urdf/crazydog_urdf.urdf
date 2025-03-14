@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="crazydog_urdf">
+  <mujoco>
+  <compiler
+    meshdir="/home/csl/robot_model/crazydog_urdf/meshes"
+    balanceinertia="true"
+    discardvisual="false" />
+  </mujoco>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.029918 -1.7786E-06 -0.025244"
+        rpy="0 0 0" />
+      <mass
+        value="0.62" />
+      <inertia
+        ixx="0.0014316"
+        ixy="2.0189E-08"
+        ixz="-7.4946E-05"
+        iyy="0.0022988"
+        iyz="-3.8781E-09"
+        izz="0.0023924" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="R_hip_fix">
+    <inertial>
+      <origin
+        xyz="-0.071968 -0.056165 -9.0424E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.536" />
+      <inertia
+        ixx="0.00021465"
+        ixy="2.2372E-07"
+        ixz="-2.4475E-07"
+        iyy="0.00012408"
+        iyz="-3.0046E-07"
+        izz="0.00012018" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/R_hip_fix.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/R_hip_fix.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_hip_fix"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="R_hip_fix" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="R_hip">
+    <inertial>
+      <origin
+        xyz="0.050012 -0.00066363 -8.4178E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.573" />
+      <inertia
+        ixx="0.00013072"
+        ixy="3.3092E-06"
+        ixz="3.5562E-07"
+        iyy="0.00024737"
+        iyz="2.3793E-07"
+        izz="0.00015128" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/R_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/R_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_base2hip"
+    type="fixed">
+    <origin
+      xyz="-0.0532503843026156 -0.0562499999999237 0"
+      rpy="0 0 0" />
+    <parent
+      link="R_hip_fix" />
+    <child
+      link="R_hip" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="R_thigh">
+    <inertial>
+      <origin
+        xyz="-6.2352E-05 -0.039508 -0.021371"
+        rpy="0 0 0" />
+      <mass
+        value="0.9105" />
+      <inertia
+        ixx="0.0014519"
+        ixy="3.2371E-07"
+        ixz="1.5994E-08"
+        iyy="0.0014985"
+        iyz="-0.00020329"
+        izz="0.00038047" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/R_thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/R_thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_hip2thigh"
+    type="revolute">
+    <origin
+      xyz="0.0532503843026156 -0.0199500639394125 0"
+      rpy="0 0 0" />
+    <parent
+      link="R_hip" />
+    <child
+      link="R_thigh" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0.0"
+      upper="1.57"
+      effort="23.7"
+      velocity="30.0" />
+  </joint>
+  <link
+    name="R_calf">
+    <inertial>
+      <origin
+        xyz="1.5378E-05 -0.0082389 -0.16157"
+        rpy="0 0 0" />
+      <mass
+        value="0.555" />
+      <inertia
+        ixx="0.001409"
+        ixy="-6.9198E-08"
+        ixz="-1.1379E-06"
+        iyy="0.0014225"
+        iyz="-9.5527E-05"
+        izz="8.2502E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/R_calf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/R_calf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_thigh2calf"
+    type="revolute">
+    <origin
+      xyz="0 -0.0637999997592934 -0.21499974091937"
+      rpy="0 0 0" />
+    <parent
+      link="R_thigh" />
+    <child
+      link="R_calf" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.61"
+      upper="0.0"
+      effort="23.7"
+      velocity="30.0" />
+  </joint>
+  <link
+    name="R_wheel">
+    <inertial>
+      <origin
+        xyz="-1.6115E-14 -0.0042663 -5.2525E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.2805" />
+      <inertia
+        ixx="0.00029524"
+        ixy="1.812E-19"
+        ixz="2.5527E-19"
+        iyy="0.00057738"
+        iyz="-9.2577E-19"
+        izz="0.00029524" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/R_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.15294 0.15294 0.15294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/R_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_calf2wheel"
+    type="continuous">
+    <origin
+      xyz="0 -0.0245499999999997 -0.214999987347139"
+      rpy="0 0 0" />
+    <parent
+      link="R_calf" />
+    <child
+      link="R_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="L_hip_fix">
+    <inertial>
+      <origin
+        xyz="-0.071968 0.056335 -9.0424E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.536" />
+      <inertia
+        ixx="0.00021465"
+        ixy="2.2372E-07"
+        ixz="-2.4475E-07"
+        iyy="0.00012408"
+        iyz="-3.0046E-07"
+        izz="0.00012018" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/L_hip_fix.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/L_hip_fix.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_hip_fix"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L_hip_fix" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L_hip">
+    <inertial>
+      <origin
+        xyz="0.050012 0.00066363 -8.4173E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.573" />
+      <inertia
+        ixx="0.00013072"
+        ixy="-3.3093E-06"
+        ixz="3.5551E-07"
+        iyy="0.00024737"
+        iyz="-2.3794E-07"
+        izz="0.00015128" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/L_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/L_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_base2hip"
+    type="fixed">
+    <origin
+      xyz="-0.0532503843026153 0.0562500000000755 0"
+      rpy="0 0 0" />
+    <parent
+      link="L_hip_fix" />
+    <child
+      link="L_hip" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="L_thigh">
+    <inertial>
+      <origin
+        xyz="-6.238E-05 0.039508 -0.021371"
+        rpy="0 0 0" />
+      <mass
+        value="0.9105" />
+      <inertia
+        ixx="0.0014519"
+        ixy="-3.2377E-07"
+        ixz="1.5912E-08"
+        iyy="0.0014985"
+        iyz="0.00020329"
+        izz="0.00038047" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/L_thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/L_thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_hip2thigh"
+    type="revolute">
+    <origin
+      xyz="0.0532503843026148 0.0199500639396405 0"
+      rpy="0 0 0" />
+    <parent
+      link="L_hip" />
+    <child
+      link="L_thigh" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0.0"
+      upper="1.57"
+      effort="23.7"
+      velocity="30.0" />
+  </joint>
+  <link
+    name="L_calf">
+    <inertial>
+      <origin
+        xyz="1.6296E-05 0.0082388 -0.16158"
+        rpy="0 0 0" />
+      <mass
+        value="0.555" />
+      <inertia
+        ixx="0.0014089"
+        ixy="7.03E-08"
+        ixz="-1.1423E-06"
+        iyy="0.0014225"
+        iyz="9.5525E-05"
+        izz="8.2514E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/L_calf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/L_calf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_thigh2calf"
+    type="revolute">
+    <origin
+      xyz="0 0.0637999997593029 -0.214999740919375"
+      rpy="0 0 0" />
+    <parent
+      link="L_thigh" />
+    <child
+      link="L_calf" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.61"
+      upper="0.0"
+      effort="23.7"
+      velocity="30.0" />
+  </joint>
+  <link
+    name="L_wheel">
+    <inertial>
+      <origin
+        xyz="-1.8104E-14 0.0042663 -4.3743E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.2805" />
+      <inertia
+        ixx="0.00029524"
+        ixy="-1.6997E-18"
+        ixz="-2.6717E-19"
+        iyy="0.00057738"
+        iyz="5.5957E-18"
+        izz="0.00029524" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/L_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.15294 0.15294 0.15294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/L_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_calf2wheel"
+    type="continuous">
+    <origin
+      xyz="0 0.0245500000000035 -0.214999987347138"
+      rpy="0 0 0" />
+    <parent
+      link="L_calf" />
+    <child
+      link="L_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="battery">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.672" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/battery.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://crazydog_urdf/meshes/battery.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="battery_fix"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="battery" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
