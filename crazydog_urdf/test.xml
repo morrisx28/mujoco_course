@@ -1,5 +1,38 @@
-<mujoco model="crazydog_urdf">
+<mujoco model="biped_wheel">
   <compiler angle="radian" meshdir="/home/csl/robot_model/crazydog_urdf/meshes/"/>
+
+   <default>
+    <default class="biped_wheel">
+      <joint axis="0 1 0" damping="0.1" armature="0.01" frictionloss="0.2"/>
+      <motor ctrlrange="-12 12"/>
+      <default class="hip">
+        <joint axis="1 0 0" range="-1.0472 1.0472"/>
+        <motor ctrlrange="-12 12"/>
+      </default>
+      <default class="thigh">
+        <joint axis="0 1 0" range="-1.57 1.57"/>
+        <motor ctrlrange="-12 12"/>
+      </default>
+      <default class="calf">
+        <joint axis="0 1 0" range="-2.7227 2.7227"/>
+        <motor ctrlrange="-12 12"/>
+      </default>
+      <default class="wheel">
+        <joint axis="0 1 0" />
+        <motor ctrlrange="-12 12"/>
+      </default>
+      <default class="visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2"/>
+      </default>
+      <default class="collision">
+        <geom group="3"/>
+        <default class="foot">
+          <geom size="0.022" priority="1" condim="6"
+            friction="0.4 0.02 0.01"/>
+        </default>
+      </default>
+    </default>
+  </default>
 
   <asset>
     <mesh name="base_link" file="base_link.STL"/>
