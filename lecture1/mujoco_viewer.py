@@ -45,5 +45,5 @@ def printSceneInformation(mj_model):
             index = index + mj_model.sensor_dim[i]
         print(" ")
 
-mj_model = mujoco.MjModel.from_xml_path('pineapple_v0/bipedwheel.xml')
+mj_model = mujoco.MjModel.from_xml_path('../robot/openduck_mini_v2/open_duck_mini_v2.xml')
 printSceneInformation(mj_model)

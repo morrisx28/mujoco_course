@@ -9,7 +9,7 @@ def pd_control(target_q, q, kp, target_dq, dq, kd):
 
 NUM_MOTOR = 6
 # Load a sample model 
-model = mujoco.MjModel.from_xml_path('pineapple_v0/scene.xml')
+model = mujoco.MjModel.from_xml_path('../robot/pineapple_v0/scene.xml')
 data = mujoco.MjData(model)
 target_dof_pos = np.array([1.27, -2.127, 0, 1.27, -2.127, 0])
 
