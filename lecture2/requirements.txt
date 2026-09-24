@@ -1,0 +1,5 @@
+casadi>=3.6
+numpy
+matplotlib
+notebook
+ipykernel

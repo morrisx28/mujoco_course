@@ -1,1 +1,9 @@
-lecture2/__pycache__/q1_integration.cpython-310.pyc
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+.DS_Store
+plots/
+
+# answer key - do not ship to students
+lecture2/solution/
