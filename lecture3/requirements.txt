@@ -1,0 +1,8 @@
+casadi>=3.6
+numpy
+matplotlib
+notebook
+ipykernel
+
+# only needed by the reference script's MeshCat visualization, not by the homework
+meshcat>=0.3.2

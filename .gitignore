@@ -6,4 +6,4 @@ __pycache__/
 plots/
 
 # answer key - do not ship to students
-lecture2/solution/
+lecture*/solution/
