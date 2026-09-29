@@ -4,5 +4,5 @@ matplotlib
 notebook
 ipykernel
 
-# only needed by the reference script's MeshCat visualization, not by the homework
+# optional: the 3-D view of your solved pose. Everything else works without it.
 meshcat>=0.3.2
