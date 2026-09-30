@@ -7,3 +7,9 @@ plots/
 
 # answer key - do not ship to students
 lecture*/solution/
+
+# Generated reference-motion recordings; submit these separately for HW5.
+lecture6/outputs/
+lecture3/teaching_notes_zh_TW.md
+lecture5/teaching_notes_zh_TW.md
+lecture6/teaching_notes_zh_TW.md

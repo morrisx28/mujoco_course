@@ -1,0 +1,11 @@
+# Install Placo + compiled dependencies with environment.yml first (recommended).
+# For an existing Python 3.10 environment these are the Python requirements.
+placo==0.9.25
+numpy>=2.2,<2.3
+scipy>=1.15,<1.16
+matplotlib>=3.9,<4
+meshcat==0.3.2
+notebook>=7,<8
+ipykernel>=6
+nbformat>=5.10,<6
+nbclient>=0.10,<1

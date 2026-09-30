@@ -1,0 +1,16 @@
+name: walking-course
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.10
+  - placo=0.9.25
+  - numpy=2.2
+  - scipy=1.15
+  - matplotlib
+  - meshcat=0.3.2
+  - notebook
+  - ipykernel
+  - nbformat
+  - nbclient
+  - pip

@@ -1,0 +1,114 @@
+[
+  {
+    "links": [
+      "foot_assembly",
+      "knee_and_ankle_assembly_2"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "foot_assembly_2",
+      "knee_and_ankle_assembly_4"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "head_assembly",
+      "left_antenna_holder"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "head_assembly",
+      "neck_yaw_assembly"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "head_assembly",
+      "right_antenna_holder"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "head_pitch_to_yaw",
+      "neck_pitch_assembly"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "head_pitch_to_yaw",
+      "neck_yaw_assembly"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "hip_roll_assembly",
+      "left_roll_to_pitch_assembly"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "hip_roll_assembly",
+      "trunk_assembly"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "hip_roll_assembly_2",
+      "right_roll_to_pitch_assembly"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "hip_roll_assembly_2",
+      "trunk_assembly"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "knee_and_ankle_assembly",
+      "knee_and_ankle_assembly_2"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "knee_and_ankle_assembly",
+      "left_roll_to_pitch_assembly"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "knee_and_ankle_assembly_3",
+      "knee_and_ankle_assembly_4"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "knee_and_ankle_assembly_3",
+      "right_roll_to_pitch_assembly"
+    ],
+    "reason": "adjacent joint"
+  },
+  {
+    "links": [
+      "neck_pitch_assembly",
+      "trunk_assembly"
+    ],
+    "reason": "adjacent joint"
+  }
+]
