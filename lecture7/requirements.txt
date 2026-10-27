@@ -1,0 +1,14 @@
+# Existing compatible Python 3.10 environment; prefer environment.yml for Placo.
+numpy==2.2.6
+scipy==1.15.2
+matplotlib==3.10.9
+casadi==3.7.2
+mujoco==3.13.0
+osqp==1.0.5
+meshcat==0.3.2
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.3.0
+notebook==7.4.7
+imageio==2.37.0
+imageio-ffmpeg==0.6.0
