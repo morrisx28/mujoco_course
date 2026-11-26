@@ -7,6 +7,11 @@ plots/
 
 # answer key - do not ship to students
 lecture*/solution/
+midterm/solution/
+hw2/solution/
+lecture7/outputs/
+lecture8/outputs/
+midterm/outputs/
 
 # Generated reference-motion recordings; submit these separately for HW5.
 lecture6/outputs/
